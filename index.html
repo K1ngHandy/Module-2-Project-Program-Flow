@@ -90,11 +90,11 @@
       // 🧠 pseudocode: if any int greater than zero, then result5 is "harsh"; else if any int greater
       // than 32, then "firm"; else if any int greater than 64, then "gentle"
 
-      if ((int1 || int2 || int3) > 64) {
+      if (int1 > 64 || int2 > 64 || int3 > 64) {
         result5 = "gentle";
-      } else if ((int1 || int2 || int3) > 32) {
+      } else if (int1 > 32 || int2 > 32 || int3 > 32) {
         result5 = "firm";
-      } else if ((int1 || int2 || int3) > 0) {
+      } else if (int1 > 0 || int2 > 0 || int3 > 0) {
         result5 = "harsh";
       }
 
