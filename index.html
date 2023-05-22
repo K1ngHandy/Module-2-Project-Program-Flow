@@ -90,7 +90,13 @@
       // 🧠 pseudocode: if any int greater than zero, then result5 is "harsh"; else if any int greater
       // than 32, then "firm"; else if any int greater than 64, then "gentle"
 
-      // ✨ Your code here
+      if ((int1 || int2 || int3) > 64) {
+        result5 = "gentle";
+      } else if ((int1 || int2 || int3) > 32) {
+        result5 = "firm";
+      } else if ((int1 || int2 || int3) > 0) {
+        result5 = "harsh";
+      }
 
       // 👉 CHALLENGE 6
       const amount1 = 4;
@@ -98,7 +104,15 @@
       const amount3 = 13;
       // 🧠 pseudocode: if two out of the three amounts are divisible by 4, then result6 is "not", otherwise "so"
 
-      // ✨ Your code here
+      if (
+        ((amount1 && amount2) % 4 ||
+          (amount2 && amount3) % 4 ||
+          (amount2 && amount3)) % 4
+      ) {
+        result6 = "not";
+      } else {
+        result6 = "so";
+      }
 
       // 👉 CHALLENGE 7
       const friend1 = undefined;
@@ -106,7 +120,11 @@
       const friend3 = "Peter";
       // 🧠 pseudocode: if all friends are falsy, then result7 is "day"; else if no friends are falsy, then "twilight", else "night"
 
-      // ✨ Your code here
+      if (Boolean(friend1 && friend2 && friend3)) {
+        result7 = "twilight";
+      } else {
+        result7 = "night";
+      }
 
       // 👉 CHALLENGE 8
       const monday = 0;
