@@ -57,7 +57,7 @@
       const age3 = 34;
       // 🧠 pseudocode: if any of the ages is under 18, then result2 is string "this", otherwise "that"
 
-      if ((age1 || age2 || age3) > 18) {
+      if (age1 < 18 || age2 < 18 || age3 < 18) {
         result2 = "this";
       } else {
         result2 = "that";
@@ -81,6 +81,8 @@
 
       if (data1 || data2 || data3) {
         result4 = "good";
+      } else {
+        result4 = "bad";
       }
 
       // 👉 CHALLENGE 5
@@ -120,7 +122,9 @@
       const friend3 = "Peter";
       // 🧠 pseudocode: if all friends are falsy, then result7 is "day"; else if no friends are falsy, then "twilight", else "night"
 
-      if (Boolean(friend1 && friend2 && friend3)) {
+      if (!friend1 && !friend2 && !friend3) {
+        result7 = "day";
+      } else if (friend1 && friend2 && friend3) {
         result7 = "twilight";
       } else {
         result7 = "night";
@@ -144,21 +148,24 @@
       // - Saturday, then "within"
       // - Sunday, then "beneath"
 
-      // if () {
-      //   result8 = 'in'
-      // } else if () {
-      //   result8 = 'at'
-      // } else if () {
-      //   result8 = 'on'
-      // } else if () {
-      //   result8 = 'into'
-      // } else if () {
-      //   result8 = 'from'
-      // } else if () {
-      //   result8 = 'within'
-      // } else if () {
-      //   result8 = 'beneath'
-      // }
+      let days = TODAY + 657385;
+      let remainder = days % 7;
+
+      if (remainder === 0) {
+        result8 = "in";
+      } else if (remainder === 1) {
+        result8 = "at";
+      } else if (remainder === 2) {
+        result8 = "on";
+      } else if (remainder === 3) {
+        result8 = "into";
+      } else if (remainder === 4) {
+        result8 = "from";
+      } else if (remainder === 5) {
+        result8 = "within";
+      } else if (remainder === 6) {
+        result8 = "beneath";
+      }
 
       // Tests. Do not make any changes below this line!
       const total = `${result3} ${result6} ${result1} ${result5} ${result8} ${result2} ${result4} ${result7}`;
